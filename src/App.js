@@ -3,13 +3,17 @@ import {Link} from 'react-router'
 
 
 export class App extends Component {
+  constructor(props) {
+    super(props)
+  }
   render() {
     return (
       <div>
         <nav>
-          {/*Aca deben ir los links de navegacion*/}
+          <Link to="/page1">Page 1</Link>
+          <Link to="/page2">Page 2</Link>
         </nav>
-        {/* Aca tienes que agreager algo para que las rutas funcionen*/}
+        {this.props.children}
       </div>
     )
   }
